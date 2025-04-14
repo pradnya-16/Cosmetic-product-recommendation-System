@@ -1,4 +1,4 @@
-## Ageing_Sign_Batch_4
+## Cosmetic-product-recommendation-System
 
 A model to classify & localize different signs of ageing such as puffy eyes, wrinkles and dark spots etc. on the face.
 
