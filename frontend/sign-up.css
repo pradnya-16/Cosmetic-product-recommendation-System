@@ -1,0 +1,40 @@
+*{
+	font-family: Montserrat
+}
+
+body{
+    background-image: url("img4.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+  
+.form{
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px auto;
+    padding: 16px;
+    border-radius: 5px;
+    width: 40%;
+    background-color: #DFF6FF;
+  }
+
+  h1{
+      text-align: center;
+  }
+
+  .form-item{
+      padding: 5px;
+      padding-top: 10px;
+      align-items: center;
+  }
+
+  h5{
+      padding-top: 15px;
+  }
+
+  .Sign-in-button{
+      padding-top: 20px;
+      padding-left: 200px;
+  }

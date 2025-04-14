@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" type="text/css" href="sign-up.css" />
+
+  <title>Upload Image</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #9fb4ff;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#" style="font-size: 22px; font-weight: bolder; padding-left: 10px; 
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">BeautyBuddy</a>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+          <ul class="navbar-nav" style="padding-left: 400px; font-size: 18px; font-weight: bolder; text-align: center; ">
+            <li class="nav-item">
+            <a class="nav-link" href="upload.html">Scan</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#Menu">Products</a>
+            </li>
+            <li class="nav-item ">
+            <a class="nav-link" href="index.html">Sign-Up</a>
+            </li>
+          </ul>
+          </div></div></nav>
+      
+      
+    <!-- Image Upload Form -->
+    <form action="upload_image.py" method="post" class="form">
+    <div class="form-item">
+    <h1>Image Upload Form</h1>
+      <label for="file"><h4 style="padding-left: 100px; padding-top: 20px;">Choose an image to upload:</h4></label><br>
+      <input type="file" name="file" id="file" style="padding-left: 140px; padding-top: 20px;">
+      <br>
+      <img id="preview" src="#" alt="Preview" style="max-width: 400px; display: none; padding-top: 15px; padding-left: 80px; text-align: center;">
+      <br>
+      <div style="padding-left: 170px;">
+      <button type="button" onclick="previewImage()">Preview Image</button>
+      </div>
+      </div>
+    </form>
+    
+    <script>
+      function previewImage() {
+        var file = document.querySelector('#file').files[0];
+        var reader = new FileReader();
+        
+        reader.addEventListener("load", function () {
+          var image = document.querySelector('#preview');
+          image.src = reader.result;
+          image.style.display = "block";
+        }, false);
+        
+        if (file) {
+          reader.readAsDataURL(file);
+        }
+      }
+    </script>
+    <hr>
+
+    <!--Products -->
+    <section id="Menu" class="container" >
+      <h1 class="text-center" style="padding-top: 25px;">Our Product Recommendations</h1>
+      <hr>
+      <div class="row">
+        <div class="col-sm-4" id="menu-col">
+          <a href="#pimple">
+          <img src="pimple.avif" class="img-fluid img-responsive" width="80%">
+          </a>
+          <h4 style="text-align: center;">Pimples</h4>
+        </div>
+
+        <div class="col-sm-4" id="menu-col">
+          <a href="#acne">
+          <img src="acne.avif" class="img-fluid img-responsive" width="80%">
+          </a>
+          <h4 style="text-align: center;">Acne</h4>
+        </div>
+
+        <div class="col-sm-4" id="menu-col">
+          <a href="#puffiness">
+          <img src="puffiness.avif" class="img-fluid img-responsive" width="80%">
+          </a>
+          <h4 style="text-align: center;">Puffiness</h4>
+        </div>
+
+        <div class="col-sm-4" id="menu-col">
+          <a href="#darkness">
+          <img src="darkness.avif" class="img-fluid img-responsive" width="80%">
+          </a>
+          <h4 style="text-align: center;">Darkness</h4>
+        </div>
+
+        <div class="col-sm-4" id="menu-col">
+          <a href="#pigmentation">
+          <img src="pigmentation.avif" class="img-fluid img-responsive" width="80%">
+          </a>
+          <h4 style="text-align: center;">Pigmentation</h4>
+        </div>
+
+        <div class="col-sm-4" id="menu-col">
+          <a href="#wrinkles">
+          <img src="wrinkles.avif" class="img-fluid img-responsive" width="80%">
+          </a>
+          <h4 style="text-align: center;">Wrinkles</h4>
+        </div>
+
+        <div class="col-sm-4" id="menu-col">
+          <a href="#ageing">
+          <img src="ageing.avif" class="img-fluid img-responsive" width="80%">
+          </a>
+          <h4 style="text-align: center;">Ageing</h4>
+        </div>
+
+      </div>
+
+    </section>
+    <hr>
+
+  <!--Pimples-->
+  <section id="pimple">
+  <h2 style="text-align: center;">Products for reducing Pimples</h2>
+  <ul style="list-style: none;"> 
+    <li style=" padding-top: 15px;"><b><h4>1. Clean & Clear Persa-Gel 10: </b></h4>
+    <div style="font-size: 20px;">This acne spot treatment contains 10% benzoyl peroxide to target and treat individual pimples.
+    <br>Buy it now: <a href="https://www.amazon.in/Clean-Clear-Persa-Gel-Treatment-Medication/dp/B001E96LXQ/ref=sr_1_5?
+    keywords=clean+and+clear+persa+gel+10&qid=1682945304&sprefix=clean+and+clear+per%2Caps%2C333&sr=8-5">amazon.com</a></li></div>  
+    
+    <li style=" padding-top: 15px;"><b><h4>2. La Roche-Posay Effaclar Medicated Gel Cleanser: </b></h4>
+    <div style="font-size: 20px;">This face wash contains 2% salicylic acid to help unclog pores and prevent pimples.
+      <br>Buy it now: <a href="https://www.amazon.in/Roche-Posay-Effaclar-Medicated-Cleanser-6-76oz/dp/B00LO1DNXU/ref=sr_1_5?crid=3GTJNAUR0N0J5&keywords=La+Roche-
+      Posay+Effaclar+Medicated+Gel+Cleanser&qid=1682945555&sprefix=la+roche-posay+effaclar+medicated+gel+cleanser%2Caps%2C345&sr=8-5">amazon.com</a></li></div>  
+    
+    <li style=" padding-top: 15px;"><b><h4>3. Cetaphil Pro Oil Removing Foam Wash:</b></h4>
+    <div style="font-size: 20px;">This gentle cleanser is designed to remove excess oil without over-drying the skin, making it great for acne-prone skin.
+      <br>Buy it now: <a href="https://www.amazon.in/Cetaphil-Control-Foam-Face-Prone/dp/B09MWD6F4W/ref=sr_1_
+      5?crid=3SRGFUIS0WGHM&keywords=Cetaphil+Pro+Oil+Removing+Foam+Wash%3A&qid=1682945612&sprefix=cetaphil+pro+oil+removing+foam+wash+%2Caps%2C281&sr=8-5">amazon.com</a></li></div> 
+
+    <li style=" padding-top: 15px;"><b><h4>4. The Ordinary Niacinamide 10% + Zinc 1%:</b></h4>
+    <div style="font-size: 20px;">This serum contains niacinamide and zinc to help regulate sebum production and reduce inflammation.
+      <br>Buy it now: <a href="https://www.amazon.in/Ordinary-Niacinamide-Zinc-30ml-Pack/dp/B07D744GFJ/ref=sr_1_6?crid=1Y9XU70J71TK6&keywords=The+Ordinary
+      +Niacinamide+10%25+%2B+Zinc+1%25%3A&qid=1682945720&sprefix=the+ordinary+niacinamide+10%25+%2B+zinc+1%25+%2Caps%2C365&sr=8-6">amazon.com</a></li></div>  
+    
+    <li style=" padding-top: 15px;"><b><h4>5. Neutrogena Rapid Clear Stubborn Acne Daily Leave-On Mask: </b></h4>
+    <div style="font-size: 20px;">This leave-on mask contains benzoyl peroxide to target and treat pimples throughout the day.
+      <br>Buy it now: <a href="https://www.amazon.in/Neutrogena-Rapid-Clear-Stubborn-Daily/dp/B0195I8UMM/ref=sr_1_5?crid=312F00KB85YS8&keywords=Neutrogena
+      +Rapid+Clear+Stubborn+Acne+Daily+Leave-On+Mask&qid=1682945761&sprefix=neutrogena+rapid+clear+stubborn+acne+daily+leave-on+mask%2Caps%2C343&sr=8-5">amazon.com</a></li></div> 
+    
+    <li style=" padding-top: 15px;"><b><h4>6. Dermalogica Clearing Skin Wash: </b></h4>
+    <div style="font-size: 20px;">This foaming cleanser contains salicylic acid and tea tree oil to help clear and prevent breakouts.
+      <br>Buy it now: <a href="https://www.amazon.in/Dermalogica-111249-110992-Daily-Microfoliant-74ml-2-6oz/dp/B071ZBJPH7/ref=sr_1_fkmr0_2?crid=W
+      Y9O4MVAMFLV&keywords=Dermalogica+Clearing+Skin+Wash&qid=1682945812&sprefix=dermalogica+clearing+skin+wash%2Caps%2C266&sr=8-2-fkmr0">amazon.com</a></li></div> 
+
+    <li style=" padding-top: 15px;"><b><h4>7. Mario Badescu Buffering Lotion: </b></h4>
+    <div style="font-size: 20px;">This spot treatment contains a blend of salicylic acid, niacinamide, and zinc to target and heal individual pimples.
+      <br>Buy it now: <a href="https://www.amazon.in/Mario-Badescu-Special-Cucumber-Lotion/dp/B01M6TV5ZF/ref=sr_1_1?crid=3MW26OQ8XTGD8&keywords=
+      Mario+Badescu+Buffering+Lotion&qid=1682945881&sprefix=mario+badescu+buffering+lotion%2Caps%2C310&sr=8-1">amazon.com</a></li></div> 
+
+    <li style=" padding-top: 15px;"><b><h4>8. Origins Super Spot Remover Blemish Treatment Gel: </b></h4>
+    <div style="font-size: 20px;">This spot treatment contains salicylic acid and red algae extract to target and reduce the appearance of pimples.
+      <br>Buy it now: <a href="https://www.amazon.in/Origins-Spot-Remover-Blemish-Treatment/dp/B0088NGTKQ/ref=sr_1_fkmr0_1?crid=3KKW8DTEYQOGW&keywords=Origins+Super+Spot+Remover+Blemish+
+      Treatment+Gel&qid=1682945925&sprefix=origins+super+spot+remover+blemish+treatment+gel%2Caps%2C297&sr=8-1-fkmr0">amazon.com</a></li></div> 
+
+    <li style=" padding-top: 15px;"><b><h4>9. Murad Acne Control Rapid Relief Acne Spot Treatment: </b></h4>
+    <div style="font-size: 20px;">This spot treatment contains 2% salicylic acid to quickly target and reduce the size of pimples.
+      <br>Buy it now: <a href="https://www.amazon.in/Murad-Rapid-Relief-Treatment-Ounce/dp/B06XDTLQ1Y/ref=sr_1_5?crid=2NO8UDF6LP5WZ&keywords=Murad+Acne
+      +Control+Rapid+Relief+Acne+Spot+Treatment&qid=1682945970&sprefix=murad+acne+control+rapid+relief+acne+spot+treatment%2Caps%2C227&sr=8-5">amazon.com</a></li></div> 
+
+    <li style=" padding-top: 15px;"><b><h4>10. Kate Somerville EradiKate Acne Treatment: </b></h4>
+    <div style="font-size: 20px;">This spot treatment contains sulfur to help clear and prevent pimples, as well as zinc oxide to soothe and calm the skin.
+      <br>Buy it now: <a href="https://www.amazon.in/Derma-Essentia-Salicylic-Dermatologically-Seborrhoeic/dp/B094ZW3KMJ/ref=sr_1_fkmr1_1?
+      crid=23CUJ2RQUHOI0&keywords=Kate+Somerville+EradiKate+Acne+Treatment&qid=1682946001&sprefix=kate+somerville+eradikate+acne+treatment%2Caps%2C276&sr=8-1-fkmr1">amazon.com</a></li></div> 
+  
+  </ul>
+</section>
+<hr>
+
+<!--Acne-->
+<section id="acne">
+  <h2 style="text-align: center;">Products for Reducing Acne</h2>
+  <ul style="list-style: none;"> 
+    <li style=" padding-top: 15px;"><b><h4>1. CeraVe Foaming Facial Cleanser: </b></h4>
+    <div style="font-size: 20px;">This gentle, non-drying cleanser contains ceramides and hyaluronic acid to help hydrate and protect the skin barrier while removing dirt and oil.
+    <br>Buy it now: <a href="https://www.amazon.in/Cerave-Foaming-Facial-Cleanser-Ounce/dp/B003YMJJSK/ref=sr_1_5?crid=2BTO50UZQODD5&keywords=CeraVe+Foaming+
+    Facial+Cleanser%3A&qid=1682964946&sprefix=cerave+foaming+facial+cleanser+%2Caps%2C240&sr=8-5">amazon.com</a></li></div>  
+    
+    <li style=" padding-top: 15px;"><b><h4>2. Neutrogena Oil-Free Acne Wash: </b></h4>
+    <div style="font-size: 20px;">Neutrogena Oil-Free Acne Wash: This face wash contains salicylic acid to unclog pores and help prevent breakouts.
+      <br>Buy it now: <a href="https://www.amazon.in/Neutrogena-Free-Acne-Face-175ml/dp/B006LXDMCS/ref=sr_1_5?crid=377A87Q44PVAM&keywords=
+      Neutrogena+Oil-Free+Acne+Wash&qid=1682964972&sprefix=neutrogena+oil-free+acne+wash%2Caps%2C202&sr=8-5">amazon.com</a></li></div>  
+    
+    <li style=" padding-top: 15px;"><b><h4>3. Paula's Choice Skin Perfecting 2% BHA Liquid Exfoliant:</b></h4>
+    <div style="font-size: 20px;">This leave-on exfoliant contains salicylic acid to unclog pores and smooth the skin's surface.
+      <br>Buy it now: <a href="https://www.amazon.in/Choice-SKIN-PERFECTING-Exfoliant-Facial-Blackheads-Lines-1-
+      1oz/dp/B07C5SS6YD/ref=sr_1_5?crid=2YOCF94XIV6NG&keywords=aPula%27s+Choice+Skin+Perfecting+2%25+BHA+Liquid+Exfoliant&qid=1682965001&sprefix=apula+s+choice+skin+perfecting+2%25+bha+liquid+exfoliant%2Caps%2C221&sr=8-5">amazon.com</a></li></div> 
+
+    <li style=" padding-top: 15px;"><b><h4>4. The Ordinary Niacinamide 10% + Zinc 1%:</b></h4>
+    <div style="font-size: 20px;">This serum contains niacinamide and zinc to help regulate sebum production and reduce inflammation.
+      <br>Buy it now: <a href="https://www.amazon.in/ORDINARY-Niacinamide-10-Zinc-1/dp/B07D6BC4PZ/ref=sr_1_5?crid=35BIL7HDAYCRJ&keywords=
+      The+Ordinary+Niacinamide+10%25+%2B+Zinc+1%25&qid=1682965031&sprefix=the+ordinary+niacinamide+10%25+%2B+zinc+1%25%2Caps%2C255&sr=8-5">amazon.com</a></li></div>  
+    
+    <li style=" padding-top: 15px;"><b><h4>5. La Roche-Posay Effaclar Duo+: </b></h4>
+    <div style="font-size: 20px;">This moisturizer contains salicylic acid and niacinamide to unclog pores and reduce the appearance of blemishes.
+      <br>Buy it now: <a href="https://www.amazon.in/Roche-Posay-Corrective-Unclogging-Imperfections-Anti-Marks/dp/B00HVV2G5S/ref=sr_1_5?crid=
+      1A1KYYW2SILHG&keywords=La+Roche-Posay+Effaclar+Duo%2B&qid=1682965054&sprefix=la+roche-posay+effaclar+duo%2B%2Caps%2C258&sr=8-5">amazon.com</a></li></div> 
+    
+    <li style=" padding-top: 15px;"><b><h4>6. Mario Badescu Drying Lotion: </b></h4>
+    <div style="font-size: 20px;">This spot treatment contains a blend of salicylic acid, calamine, and sulfur to dry out pimples and reduce inflammation.
+      <br>Buy it now: <a href="https://www.amazon.in/Mario-Badescu-Drying-Lotion-29/dp/B015I0VBJA/ref=sr_1_5?crid=
+      68J9E7IP9591&keywords=Mario+Badescu+Drying+Lotion&qid=1682965075&sprefix=mario+badescu+drying+lotion%2Caps%2C258&sr=8-5">amazon.com</a></li></div> 
+
+    <li style=" padding-top: 15px;"><b><h4>7. Differin Gel: </b></h4>
+    <div style="font-size: 20px;">This over-the-counter retinoid contains adapalene to help unclog pores and reduce inflammation.
+      <br>Buy it now: <a href="https://www.amazon.in/Differin-Restorative-Night-Moisturizer-pack/dp/B07SQHD8Z5/ref=sr_1_5
+      ?crid=1DQNBAZZIX3BM&keywords=Differin+Gel&qid=1682965092&sprefix=differin+gel%2Caps%2C223&sr=8-5">amazon.com</a></li></div> 
+
+    <li style=" padding-top: 15px;"><b><h4>8. Origins Clear Improvement Charcoal Mask: </b></h4>
+    <div style="font-size: 20px;">This mask contains activated charcoal to draw out impurities and unclog pores.
+      <br>Buy it now: <a href="https://www.amazon.in/Origins-Clear-Improvement-Active-Charcoal/dp/B004W75SLI/ref=sr_1_4
+      ?crid=8UU631DEK8BH&keywords=Origins+Clear+Improvement+Charcoal+Mask&qid=1682965115&sprefix=origins+clear+improvement+charcoal+mask%2Caps%2C199&sr=8-4">amazon.com</a></li></div> 
+
+    <li style=" padding-top: 15px;"><b><h4>9. Aztec Secret Indian Healing Clay: </b></h4>
+    <div style="font-size: 20px;">This clay mask contains bentonite clay to absorb excess oil and draw out impurities.
+      <br>Buy it now: <a href="https://www.amazon.in/Aztec-Secret-Healing-Bentonite-Pigmentation/dp/B08JYN8CJS/ref=sr_1_5
+      ?crid=312ZE34UQ80QG&keywords=Aztec+Secret+Indian+Healing+Clay&qid=1682965137&sprefix=aztec+secret+indian+healing+clay%2Caps%2C209&sr=8-5">amazon.com</a></li></div> 
+
+    <li style=" padding-top: 15px;"><b><h4>10. Bioderma Sensibio H2O Micellar Water: </b></h4>
+    <div style="font-size: 20px;">This gentle, non-rinse cleanser contains micelles to gently remove makeup and dirt without stripping the skin.
+      <br>Buy it now: <a href="https://www.amazon.in/Bioderma-3401575390447-Sensibio-H2O-250ml/dp/B0036SFTK4/ref=sr_1_3?
+      crid=4LU5JM9YGENJ&keywords=Bioderma+Sensibio+H2O+Micellar+Water&qid=1682965157&sprefix=bioderma+sensibio+h2o+micellar+water%2Caps%2C322&sr=8-3">amazon.com</a></li></div> 
+  
+  </ul>
+</section>
+<hr>
+
+<!--Puffiness-->
+<section id="puffiness">
+  <h2 style="text-align: center;">Products for Reducing Puffiness</h2>
+  <ul style="list-style: none;"> 
+    <li style=" padding-top: 15px;"><b><h4>1. Origins GinZing Refreshing Eye Cream: </b></h4>
+    <div style="font-size: 20px;">Contains caffeine, ginseng, and magnolia extract to reduce puffiness and brighten the under-eye area.
+    <br>Buy it now: <a href="https://www.amazon.in/Origins-Ginzing-Refreshing-Brighten-Depuff/dp/B00JIBFEQC/ref=
+    sr_1_5?keywords=Origins+GinZing+Refreshing+Eye+Cream%3A&qid=1682967982&sr=8-5">amazon.com</a></li></div>  
+    
+    <li style=" padding-top: 15px;"><b><h4>2. The Ordinary Caffeine Solution 5% + EGCG: </b></h4>
+    <div style="font-size: 20px;">Contains caffeine and green tea extract to reduce puffiness and dark circles. 
+      <br>Buy it now: <a href="https://www.amazon.in/Ordinary-Caffeine-Solution-EGCG-30ml/dp/
+      B076JHH47K/ref=sr_1_5?crid=3DFKHGIKH5ZPD&keywords=The+Ordinary+Caffeine+Solution+5%25+%2B+EGCG&qid=1682968007&sprefix=origins+ginzing+refreshing+eye+cream+%2Caps%2C369&sr=8-5">amazon.com</a></li></div>  
+    
+    <li style=" padding-top: 15px;"><b><h4>3. Kiehl's Creamy Eye Treatment with Avocado: </b></h4>
+    <div style="font-size: 20px;">Contains avocado oil and shea butter to hydrate and soothe the under-eye area, reducing puffiness and dryness.
+      <br>Buy it now: <a href="https://www.amazon.in/Creamy-Eye-Treatment-Avocado-Ounce/dp/B07ZZYMWDT/ref=sr_1_
+      5?crid=39YUJXG93D0ZP&keywords=Kiehl%27s+Creamy+Eye+Treatment+with+Avocado&qid=1682968030&sprefix=kiehls+creamy+eye+treatment+with+avocado%2Caps%2C509&sr=8-5">amazon.com</a></li></div> 
+
+    <li style=" padding-top: 15px;"><b><h4>4. Clinique All About Eyes: </b></h4>
+    <div style="font-size: 20px;">Contains caffeine, algae extract, and cucumber extract to reduce puffiness and dark circles.
+      <br>Buy it now: <a href="https://www.amazon.in/Clinique-About-Cream-Unisex-Ounce/dp/B000OUTR32/ref=sr_1_5?crid=1ONQT7QSRXP
+      BR&keywords=Clinique+All+About+Eyes&qid=1682968052&sprefix=kiehls+creamy+eye+treatment+with+avocado%2Caps%2C661&sr=8-5">amazon.com</a></li></div>  
+    
+    <li style=" padding-top: 15px;"><b><h4>5. Tatcha The Pearl Tinted Eye Illuminating Treatment:  </b></h4>
+    <div style="font-size: 20px;">Contains pearl extract and caffeine to brighten the under-eye area and reduce puffiness.
+      <br>Buy it now: <a href="https://www.amazon.in/TATCHA-Pearl-Tinted-Illuminating-Treatment/dp
+      /B07CFX5CDY/ref=sr_1_fkmr0_1?crid=PHFGJRQ8CAE5&keywords=Tatcha+The+Pearl+Tinted+Eye+Illuminating+Treatment&qid=1682968080&sprefix=tatcha+the+pearl+tinted+eye+illuminating+treatment%2Caps%2C851&sr=8-1-fkmr0">amazon.com</a></li></div> 
+    
+    <li style=" padding-top: 15px;"><b><h4>6. Peter Thomas Roth Cucumber Gel Mask:  </b></h4>
+    <div style="font-size: 20px;">Contains cucumber extract, papaya extract, and chamomile extract to soothe and hydrate the skin, reducing puffiness and inflammation.
+      <br>Buy it now: <a href="https://www.amazon.in/Peter-Thomas-Roth-Cucumber-
+      ounce/dp/B0080FIRGQ/ref=sr_1_1?keywords=Peter+Thomas+Roth+Cucumber+Gel+Mask&qid=1682968111&sr=8-1">amazon.com</a></li></div> 
+
+    <li style=" padding-top: 15px;"><b><h4>7. Ole Henriksen Banana Bright Eye Crème:  </b></h4>
+    <div style="font-size: 20px;">Contains vitamin C, jojoba seed oil, and shea butter to brighten and hydrate the under-eye area, reducing puffiness and dryness.
+      <br>Buy it now: <a href="https://www.amazon.in/Henriksen-Banana-Bright-Creme-Travel/dp/B079K5GLWJ/ref=sr_1_5?crid=3
+      U04R7ENWIC10&keywords=Ole+Henriksen+Banana+Bright+Eye+Cr%C3%A8me&qid=1682968139&sprefix=peter+thomas+roth+cucumber+gel+mask%2Caps%2C861&sr=8-5">amazon.com</a></li></div> 
+
+    <li style=" padding-top: 15px;"><b><h4>8. La Mer The Eye Concentrate: </b></h4>
+    <div style="font-size: 20px;">Contains caffeine, algae extract, and fermented yeast to reduce puffiness and dark circles while hydrating and firming the skin.
+      <br>Buy it now: <a href="https://www.amazon.in/Mer-Eye-Concentrate-15ml/dp/B001IYZ94E/ref=sr_1_4?
+      crid=8BQK8XP2BEBH&keywords=La+Mer+The+Eye+Concentrate%3A&qid=1682968162&sprefix=la+mer+the+eye+concentrate+%2Caps%2C505&sr=8-4">amazon.com</a></li></div> 
+
+    <li style=" padding-top: 15px;"><b><h4>9. First Aid Beauty Eye Duty Niacinamide Brightening Cream: </b></h4>
+    <div style="font-size: 20px;"> Contains niacinamide and caffeine to reduce puffiness, dark circles, and fine lines.
+      <br>Buy it now: <a href="https://www.amazon.in/First-Aid-Beauty-Rescue-Mattifying/dp/B00ZE3T6MG/ref=sr_1_8?crid=
+      1NU3JC25PKSP7&keywords=First+Aid+Beauty+Eye+Duty+Niacinamide+Brightening+Cream&qid=1682968199&sprefix=la+mer+the+eye+concentrate+%2Caps%2C741&sr=8-8">amazon.com</a></li></div> 
+
+    <li style=" padding-top: 15px;"><b><h4>10. Sunday Riley Autocorrect Brightening and Depuffing Eye Contour Cream: </b></h4>
+    <div style="font-size: 20px;"> Contains caffeine, Brazilian ginseng root extract, and horse chestnut extract to reduce puffiness and brighten the under-eye area.
+      <br>Buy it now: <a href="https://www.amazon.in/COSMBEAU-vitamin-cream-hydrating-brightening/dp/B0BMGDNWV8/ref=sr_1_fkmr0_1?
+      crid=3FV2NN0F7U9OL&keywords=Sunday+Riley+Autocorrect+Brightening+and+Depuffing+Eye+Contour+Cream&qid=1682968232&sprefix=sunday+riley+autocorrect+brightening+and+depuffing+eye+contour+cream%2Caps%2C1178&sr=8-1-fkmr0">amazon.com</a></li></div> 
+  
+  </ul>
+</section>
+<hr>
+
+<!--Darkness-->
+<section id="darkness">
+  <h2 style="text-align: center;">Products for Reducing Darkness</h2>
+  <ul style="list-style: none;"> 
+    <li style=" padding-top: 15px;"><b><h4>1. Olay Eyes Ultimate Eye Cream: </b></h4>
+    <div style="font-size: 20px;">This eye cream contains peptides and vitamins to help brighten the under-eye area and reduce the appearance of dark circles.
+    <br>Buy it now: <a href="https://www.amazon.in/Olay-Cream-Circles-Wrinkles-Puffiness/dp/B076Q6ZY48/ref=sr_1_5?crid=2R472ECH4HM83&keywords
+    =Olay+Eyes+Ultimate+Eye+Cream%3A&qid=1682966514&sprefix=bioderma+sensibio+h2o+micellar+water%2Caps%2C757&sr=8-5">amazon.com</a></li></div>  
+    
+    <li style=" padding-top: 15px;"><b><h4>2. Kiehl's Powerful-Strength Line-Reducing Eye-Brightening Concentrate: </b></h4>
+    <div style="font-size: 20px;">This eye serum contains vitamin C and hyaluronic acid to help brighten and hydrate the under-eye area.
+      <br>Buy it now: <a href="https://www.amazon.in/Dermatologist-Solutions-Powerful-Strength-Line-Reducing-Concentrate/dp/B002KMXGIE/ref=sr_
+      1_fkmr0_1?crid=FE7PUDF2CL87&keywords=Kiehl%27s+Powerful-Strength+Line-Reducing+Eye-Brightening+Concentrate&qid=1682966540&sprefix=kiehl+s+powerful-strength+line-reducing+eye-brightening+concentrate%2Caps%2C449&sr=8-1-fkmr0">amazon.com</a></li></div>  
+    
+    <li style=" padding-top: 15px;"><b><h4>3. The Ordinary Caffeine Solution 5% + EGCG: </b></h4>
+    <div style="font-size: 20px;">This serum contains caffeine and EGCG (a compound found in green tea) to help reduce the appearance of dark circles and puffiness.his gentle cleanser is designed to remove excess oil without over-drying the skin, making it great for acne-prone skin.
+      <br>Buy it now: <a href="https://www.amazon.in/Ordinary-Caffeine-Solution-EGCG-30ml/dp/B076JHH47K/ref=sr_1_5?crid=1G9G887NQ5PJV&keywords=
+      The+Ordinary+Caffeine+Solution+5%25+%2B+EGCG&qid=1682966565&sprefix=the+ordinary+caffeine+solution+5%25+%2B+egcg%2Caps%2C366&sr=8-5">amazon.com</a></li></div> 
+
+    <li style=" padding-top: 15px;"><b><h4>4. Tatcha The Pearl Tinted Eye Illuminating Treatment: </b></h4>
+    <div style="font-size: 20px;">This tinted eye treatment contains pearl pigments to instantly brighten the under-eye area, as well as anti-aging ingredients to help reduce the appearance of dark circles over time.
+      <br>Buy it now: <a href="https://www.amazon.in/Murad-Essential-C-Moisture-Broad-Spectrum/dp/B0029L1LI8/ref=sr_1_5?crid=29FKZLBF2EW1Y&keywords=Tatcha+The+Pearl+Tinted+Eye+Illuminating+Treatment&qid=
+      1682966599&sprefix=tatcha+the+pearl+tinted+eye+illuminating+treatment%2Caps%2C644&sr=8-5">amazon.com</a></li></div>  
+    
+    <li style=" padding-top: 15px;"><b><h4>5. Drunk Elephant C-Tango Multivitamin Eye Cream:  </b></h4>
+    <div style="font-size: 20px;">This eye cream contains a blend of antioxidants and vitamin C to help brighten and firm the under-eye area.
+      <br>Buy it now: <a href="https://www.amazon.in/drklphnt-C-Firma-Day-Serum-1oz/dp/B01MSJ8PNZ/ref=sr_1_5?crid=3AZ4E3S5T1ZN0&keywords=Drunk+Elephant+C-Tango+Multivitamin+Eye+Cream&qid=
+      1682966628&sprefix=drunk+elephant+c-tango+multivitamin+eye+cream%2Caps%2C379&sr=8-5">amazon.com</a></li></div> 
+    
+    <li style=" padding-top: 15px;"><b><h4>6. Origins GinZing Refreshing Eye Cream:  </b></h4>
+    <div style="font-size: 20px;">This eye cream contains caffeine and ginseng to help brighten and depuff the under-eye area.
+      <br>Buy it now: <a href="https://www.amazon.in/Origins-Ginzing-Refreshing-Brighten-Depuff/dp/B00JIBFEQC/ref=sr_1_5?crid=6FNLBSS8C17M&k
+      eywords=Origins+GinZing+Refreshing+Eye+Cream&qid=1682966651&sprefix=origins+ginzing+refreshing+eye+cream%2Caps%2C393&sr=8-5">amazon.com</a></li></div> 
+
+    <li style=" padding-top: 15px;"><b><h4>7. Sunday Riley Auto Correct Brightening and Depuffing Eye Contour Cream: </b></h4>
+    <div style="font-size: 20px;">This eye cream contains caffeine, horse chestnut extract, and lutein to help reduce the appearance of dark circles and puffiness.
+      <br>Buy it now: <a href="https://www.amazon.in/Origins-Ginzing-Energy-Boosting-Moisturizer-50Ml/dp/B00C2QROVS/ref=sr_1_7?crid=6FNLBSS8C17
+      M&keywords=Origins+GinZing+Refreshing+Eye+Cream&qid=1682966687&sprefix=origins+ginzing+refreshing+eye+cream%2Caps%2C393&sr=8-7">amazon.com</a></li></div> 
+
+    <li style=" padding-top: 15px;"><b><h4>8. L'Oreal Paris Age Perfect Hydra-Nutrition Manuka Honey Eye Gel:  </b></h4>
+    <div style="font-size: 20px;">This eye gel contains manuka honey and calcium to help hydrate and brighten the under-eye area.
+      <br>Buy it now: <a href="https://www.amazon.in/LOreal-Paris-Perfect-Anti-Fine-Lines/dp/B00S4R0PSS/ref=sr_1_4?crid=ZZ0TTHN7B4
+      6M&keywords=L%27Oreal+Paris+Age+Perfect+Hydra-Nutrition+Manuka+Honey+Eye+Gel&qid=1682966713&sprefix=l+oreal+paris+age+perfect+hydra-nutrition+manuka+honey+eye+gel%2Caps%2C820&sr=8-4">amazon.com</a></li></div> 
+
+    <li style=" padding-top: 15px;"><b><h4>9. First Aid Beauty Eye Duty Triple Remedy AM Gel Cream: </b></h4>
+    <div style="font-size: 20px;">This eye cream contains caffeine, licorice root, and illuminating micro-pearls to help reduce the appearance of dark circles and fine lines.
+      <br>Buy it now: <a href="https://www.amazon.in/Minimalist-Peeling-Solution-Cleansing-Exfoliant/dp/B08KSJ32SC/ref=sr_1_5?crid=1WSSYBT126B2V&keywords=
+      First+Aid+Beauty+Eye+Duty+Triple+Remedy+AM+Gel+Cream&qid=1682966743&sprefix=first+aid+beauty+eye+duty+triple+remedy+am+gel+cream%2Caps%2C638&sr=8-5">amazon.com</a></li></div> 
+
+    <li style=" padding-top: 15px;"><b><h4>10. Estee Lauder Advanced Night Repair Eye Supercharged Complex:  </b></h4>
+    <div style="font-size: 20px;">This eye cream contains hyaluronic acid and antioxidants to help hydrate and brighten the under-eye area while also reducing the appearance of fine lines and wrinkles.
+      <br>Buy it now: <a href="https://www.amazon.in/Estee-Lauder-Advanced-Supercharged-Synchronized/dp/B08PDZMQJT/ref=sr_1_1?crid=1G3VU0FL3UBEF&
+      keywords=Estee+Lauder+Advanced+Night+Repair+Eye+Supercharged+Complex&qid=1682966768&sprefix=estee+lauder+advanced+night+repair+eye+supercharged+complex%2Caps%2C644&sr=8-1">amazon.com</a></li></div> 
+  
+  </ul>
+</section>
+<hr>
+
+<!--Pigmentation-->
+<section id="pigmentation">
+  <h2 style="text-align: center;">Products for Reducing Pigmentation</h2>
+  <ul style="list-style: none;"> 
+    <li style=" padding-top: 15px;"><b><h4>1. The Ordinary Alpha Arbutin 2% + HA:</b></h4>
+    <div style="font-size: 20px;">This serum contains alpha arbutin and hyaluronic acid to help reduce the appearance of pigmentation and improve skin texture.
+    <br>Buy it now: <a href="https://www.amazon.in/Ordinary-Alpha-Arbutin-reduce-Pigmentation/dp/B07DBLG6B9/ref=sr_1_5?crid=3OYGY2LV8NQFQ&keywords=The+Ordinary+
+    Alpha+Arbutin+2%25+%2B+HA%3A&qid=1682955950&sprefix=the+ordinary+alpha+arbutin+2%25+%2B+ha+%2Caps%2C298&sr=8-5">amazon.com</a></li></div>  
+    
+    <li style=" padding-top: 15px;"><b><h4>2. Murad Rapid Age Spot Correcting Serum: </b></h4>
+    <div style="font-size: 20px;">This serum contains vitamin C and turmeric to help brighten the skin and reduce the appearance of pigmentation.
+      <br>Buy it now: <a href="https://www.amazon.in/Murad-Rapid-Spot-Correcting-Serum/dp/B0785FST6D/ref=sr_1_5?crid=1504I4YYWU5PS&keywords=
+      Murad+Rapid+Age+Spot+Correcting+Serum&qid=1682962442&sprefix=murad+rapid+age+spot+correcting+serum%2Caps%2C299&sr=8-5">amazon.com</a></li></div>  
+    
+    <li style=" padding-top: 15px;"><b><h4>3. Sunday Riley C.E.O. Rapid Flash Brightening Serum:</b></h4>
+    <div style="font-size: 20px;">This gentle cleanser is designed to remove excess oil without over-drying the skin, making it great for acne-prone skin.
+      <br>Buy it now: <a href="https://www.amazon.in/Minimalist-Vitamin-Glowing-Effective-Brightening/dp/B08MVBF4P8/ref=sr_1_5?crid=
+      2J9ISPGHDJUJ8&keywords=Sunday+Riley+C.E.O.+Rapid+Flash+Brightening+Serum&qid=1682962494&sprefix=sunday+riley+c.e.o.+rapid+flash+brightening+serum%2Caps%2C343&sr=8-5">amazon.com</a></li></div> 
+
+    <li style=" padding-top: 15px;"><b><h4>4. Kiehl's Clearly Corrective Dark Spot Solution:</b></h4>
+    <div style="font-size: 20px;">This serum contains vitamin C, white birch extract, and peony extract to help reduce the appearance of dark spots and pigmentation.
+      <br>Buy it now: <a href="https://www.amazon.in/Kiehls-Clearly-Corrective-Dark-Solution/dp/B01NAI71RD/ref=sr_1_5?crid=DIOGOTE55G4G&keywords=
+      Kiehl%27s+Clearly+Corrective+Dark+Spot+Solution&qid=1682962542&sprefix=kiehls+clearly+corrective+dark+spot+solution%2Caps%2C276&sr=8-5">amazon.com</a></li></div>  
+
+    <li style=" padding-top: 15px;"><b><h4>5. PCA Skin Pigment Gel: </b></h4>
+    <div style="font-size: 20px;">This treatment gel contains hydroquinone and kojic acid to help reduce the appearance of pigmentation and improve skin tone.
+      <br>Buy it now: <a href="https://www.amazon.in/Minimalist-Arbutin-Pigmentation-Hyaluronic-Blemishes/dp/B08GGDRRQ8/ref=sr_1_5?crid=
+      HRN30RZEXPFG&keywords=PCA+Skin+Pigment+Gel%3A&qid=1682962566&sprefix=pca+skin+pigment+gel+%2Caps%2C407&sr=8-5">amazon.com</a></li></div> 
+    
+    <li style=" padding-top: 15px;"><b><h4>6. SkinCeuticals Discoloration Defense Serum: </b></h4>
+    <div style="font-size: 20px;">This serum contains tranexamic acid and niacinamide to help reduce the appearance of dark spots and pigmentation.
+      <br>Buy it now: <a href="https://www.amazon.in/SkinQ-Elixir-Brightening-Glowing-Complexion/dp/B08KHKY85Q/ref=sr_1_6?crid=3V22Z2T9Q8QKQ&keywords=
+      SkinCeuticals+Discoloration+Defense+Serum&qid=1682962593&sprefix=skinceuticals+discoloration+defense+serum%2Caps%2C296&sr=8-6">amazon.com</a></li></div> 
+
+    <li style=" padding-top: 15px;"><b><h4>7. Dr. Dennis Gross Skincare Ferulic Acid + Retinol Brightening Solution: </b></h4>
+    <div style="font-size: 20px;">This serum contains ferulic acid and retinol to help reduce the appearance of pigmentation and improve skin texture.
+      <br>Buy it now: <a href="https://www.amazon.in/Dr-Dennis-Gross-Skincare-Original/dp/B074JCCQC6/ref=sr_1_fkmr0_1?crid=79BCFB4FGUB7&keywords=Dr.
+      +Dennis+Gross+Skincare+Ferulic+Acid+%2B+Retinol+Brightening+Solution%3A&qid=1682962624&sprefix=dr.+dennis+gross+skincare+ferulic+acid+%2B+retinol+brightening+solution+%2Caps%2C317&sr=8-1-fkmr0">amazon.com</a></li></div> 
+
+    <li style=" padding-top: 15px;"><b><h4>8. Paula's Choice Resist Brightening Essence: </b></h4>
+    <div style="font-size: 20px;">This essence contains niacinamide and licorice root extract to help reduce the appearance of pigmentation and improve skin tone.
+      <br>Buy it now: <a href="https://www.amazon.in/Choice-Ultra-Light-Antioxidant-Hyaluronic-Vitamins/dp/B00L5O3HBE/ref=sr_1_5?crid=2NWSMPGH1F82L&keywords=
+      Paula%27s+Choice+Resist+Brightening+Essence&qid=1682962661&sprefix=dr.+dennis+gross+skincare+ferulic+acid+%2B+retinol+brightening+solution+%2Caps%2C342&sr=8-5">amazon.com</a></li></div> 
+
+    <li style=" padding-top: 15px;"><b><h4>9. La Roche-Posay Mela-D Pigment Control Serum: </b></h4>
+    <div style="font-size: 20px;">This serum contains kojic acid and glycolic acid to help reduce the appearance of pigmentation and improve skin texture.
+      <br>Buy it now: <a href="https://www.amazon.in/Roche-Posay-Pigment-Control-1-01oz/dp/B005IXGA6C/ref=sr_1_5?crid=LNH1CWVSQTMU&keywords=La+Roche-Posay
+      +Mela-D+Pigment+Control+Serum&qid=1682962683&sprefix=la+roche-posay+mela-d+pigment+control+serum%2Caps%2C269&sr=8-5">amazon.com</a></li></div> 
+
+    <li style=" padding-top: 15px;"><b><h4>10. Dermalogica PowerBright TRx Pure Light SPF 50: </b></h4>
+    <div style="font-size: 20px;">This moisturizer contains oligopeptides and mineral UV blockers to help reduce the appearance of pigmentation and protect the skin from further damage.
+      <br>Buy it now: <a href="https://www.amazon.in/Roche-Posay-Pigment-Control-1-01oz/dp/B005IXGA6C/ref=sr_1_5?crid=LNH1CWVSQTMU&keywords=La+Roche-Posay
+      +Mela-D+Pigment+Control+Serum&qid=1682962683&sprefix=la+roche-posay+mela-d+pigment+control+serum%2Caps%2C269&sr=8-5">amazon.com</a></li></div>  
+  </ul>
+</section>
+<hr>
+
+<!--Wrinkles-->
+<section id="wrinkles">
+  <h2 style="text-align: center;">Products for Reducing Wrinkles</h2>
+  <ul style="list-style: none;"> 
+    <li style=" padding-top: 15px;"><b><h4>1. Olay Regenerist Retinol 24 Night Moisturizer: </b></h4>
+    <div style="font-size: 20px;">This night cream contains retinol to help reduce the appearance of fine lines and wrinkles while also hydrating the skin.
+    <br>Buy it now: <a href="https://www.amazon.in/Olay-Night-Cream-Regenerist-Moisturiser/dp/B08698TW6X/ref=sr_1_5?crid=GVK9PTFMNFUX&keywords=
+    Olay+Regenerist+Retinol+24+Night+Moisturizer%3A&qid=1682963401&sprefix=olay+regenerist+retinol+24+night+moisturizer+%2Caps%2C344&sr=8-5">amazon.com</a></li></div>  
+    
+    <li style=" padding-top: 15px;"><b><h4>2. The Ordinary Buffet + Copper Peptides 1%: </b></h4>
+    <div style="font-size: 20px;">This serum contains copper peptides and multiple peptides to help improve skin elasticity and reduce the appearance of wrinkles.
+      <br>Buy it now: <a href="https://www.amazon.in/Ordinary-Buffet-Multi-Technology-Peptide/dp/B07DP76XPL/ref=sr_1_1?crid=2BNQ7NBEUMR78&keywords=
+      The+Ordinary+Buffet+%2B+Copper+Peptides+1%25%3A&qid=1682963427&sprefix=the+ordinary+buffet+%2B+copper+peptides+1%25+%2Caps%2C201&sr=8-1">amazon.com</a></li></div>  
+    
+    <li style=" padding-top: 15px;"><b><h4>3. Paula's Choice Clinical 1% Retinol Treatment:</b></h4>
+    <div style="font-size: 20px;">This serum contains 1% retinol to help reduce the appearance of fine lines and wrinkles, as well as niacinamide to help even skin tone.
+      <br>Buy it now: <a href="https://www.amazon.in/Paulas-Choice-Clinical-Treatment-Peptides/dp/B00L5O31VK/ref=sr_1_5?crid=56CGQHI2AX3R&keywords=
+      Paula%27s+Choice+Clinical+1%25+Retinol+Treatment&qid=1682963461&sprefix=paula+s+choice+clinical+1%25+retinol+treatment%2Caps%2C268&sr=8-5">amazon.com</a></li></div> 
+
+    <li style=" padding-top: 15px;"><b><h4>4. Neutrogena Rapid Wrinkle Repair Retinol Oil:</b></h4>
+    <div style="font-size: 20px;">This facial oil contains retinol to help reduce the appearance of fine lines and wrinkles while also providing hydration.
+      <br>Buy it now: <a href="https://www.amazon.in/Neutrogena-Rapid-Wrinkle-Repair-Moisturizer/dp/B004D2C4Q4/ref=sr_1_5?crid=1V840GE3RRD4U&keywords=
+      Neutrogena+Rapid+Wrinkle+Repair+Retinol+Oil&qid=1682963483&sprefix=neutrogena+rapid+wrinkle+repair+retinol+oil%2Caps%2C265&sr=8-5">amazon.com</a></li></div>  
+    
+    <li style=" padding-top: 15px;"><b><h4>5. RoC Retinol Correxion Deep Wrinkle Night Cream: </b></h4>
+    <div style="font-size: 20px;"> This night cream contains retinol to help reduce the appearance of deep wrinkles and fine lines.
+      <br>Buy it now: <a href="https://www.amazon.in/RoC-Retinol-Correxion-Wrinkle-1-Ounce/dp/B00027DMI8/ref=sr_1_5?crid=2ZI9IHXIXB0WN&keywords=
+      RoC+Retinol+Correxion+Deep+Wrinkle+Night+Cream&qid=1682963504&sprefix=roc+retinol+correxion+deep+wrinkle+night+cream%2Caps%2C253&sr=8-5">amazon.com</a></li></div> 
+    
+    <li style=" padding-top: 15px;"><b><h4>6. La Roche-Posay Redermic R Retinol Cream: </b></h4>
+    <div style="font-size: 20px;"> This retinol cream contains a blend of retinol and antioxidants to help reduce the appearance of wrinkles and improve skin texture.
+      <br>Buy it now: <a href="https://www.amazon.in/Roche-Posay-Redermic-Retinol-Anti-Aging-Corrector/dp/B07Q7YGXQ7/ref=sr_1_5?crid=SH96J5IWJHL2&keywords=
+      La+Roche-Posay+Redermic+R+Retinol+Cream&qid=1682963523&sprefix=la+roche-posay+redermic+r+retinol+cream%2Caps%2C282&sr=8-5">amazon.com</a></li></div> 
+
+    <li style=" padding-top: 15px;"><b><h4>7. Sunday Riley A+ High-Dose Retinoid Serum: </b></h4>
+    <div style="font-size: 20px;">This serum contains a high concentration of retinoids to help reduce the appearance of fine lines, wrinkles, and sun damage.
+      <br>Buy it now: <a href="https://www.amazon.in/Sunday-Riley-Sleeping-Night-0-5Oz/dp/B06XB6GZXQ/ref=sr_1_5?crid=143VQ5G5ZLCXY&keywords=Sunday+Riley+
+      A%2B+High-Dose+Retinoid+Serum&qid=1682963547&sprefix=sunday+riley+a%2B+high-dose+retinoid+serum%2Caps%2C254&sr=8-5">amazon.com</a></li></div> 
+
+    <li style=" padding-top: 15px;"><b><h4>8. SkinCeuticals C E Ferulic Serum: </b></h4>
+    <div style="font-size: 20px;">This antioxidant serum contains vitamin C, vitamin E, and ferulic acid to help protect the skin from environmental stressors and improve the appearance of fine lines and wrinkles.
+      <br>Buy it now: <a href="https://www.amazon.in/Skinceuticals-Ferulic-30-Ml-Fl-oz/dp/B001CJJ5SQ/ref=sr_1_5?crid=1VQWEZFYC67KT&keywords=SkinCeuticals+C+E+Ferulic+Serum&qid=
+      1682963566&sprefix=skinceuticals+c+e+ferulic+serum%2Caps%2C250&sr=8-5">amazon.com</a></li></div> 
+
+    <li style=" padding-top: 15px;"><b><h4>9. Kiehl's Powerful-Strength Line-Reducing Concentrate: </b></h4>
+    <div style="font-size: 20px;">This serum contains a high concentration of vitamin C to help reduce the appearance of fine lines and wrinkles.
+      <br>Buy it now: <a href="https://www.amazon.in/Dermatologist-Solutions-Powerful-Strength-Line-Reducing-Concentrate/dp/B002KMXGIE/ref=sr_1_5?crid=FHBS1MUBD28Y&keywords
+      =Kiehl%27s+Powerful-Strength+Line-Reducing+Concentrate&qid=1682963589&sprefix=kiehl+s+powerful-strength+line-reducing+concentrate%2Caps%2C219&sr=8-5">amazon.com</a></li></div> 
+
+    <li style=" padding-top: 15px;"><b><h4>10. L'Oreal Paris Revitalift Derm Intensives Night Serum with 0.3% Pure Retinol: </b></h4>
+    <div style="font-size: 20px;">This serum contains 0.3% retinol to help reduce the appearance of fine lines and wrinkles while also improving skin texture and tone.
+      <br>Buy it now: <a href="https://www.amazon.in/LOr%C3%A9al-Paris-Revitalift-HYALURONIC-SERUM/dp/B08QSTTSNH/ref=sr_1_5?crid=1YUS42J5WUJRH&keywords=L%27Oreal+Paris+
+      Revitalift+Derm+Intensives+Night+Serum+with+0.3%25+Pure+Retinol&qid=1682963609&sprefix=kiehl+s+powerful-strength+line-reducing+concentrate%2Caps%2C206&sr=8-5">amazon.com</a></li></div> 
+  
+  </ul>
+</section>
+<hr>
+
+<!--Aging-->
+<section id="ageing">
+  <h2 style="text-align: center;">Products for Reducing Signs of Aging</h2>
+  <ul style="list-style: none;"> 
+    <li style=" padding-top: 15px;"><b><h4>1. Olay Regenerist Retinol 24 Night Moisturizer:  </b></h4>
+    <div style="font-size: 20px;">Contains retinol, niacinamide, and vitamin E to reduce fine lines, wrinkles, and improve skin texture.
+    <br>Buy it now: <a href="https://www.amazon.in/Olay-Night-Cream-Regenerist-Moisturiser/dp/B08698TW6X/ref=sr_1_
+    5?crid=286IUTOXI134Y&keywords=Olay+Regenerist+Retinol+24+Night+Moisturizer&qid=1682969067&sprefix=olay+regenerist+retinol+24+night+moisturizer%2Caps%2C352&sr=8-5">amazon.com</a></li></div>  
+    
+    <li style=" padding-top: 15px;"><b><h4>2. The Ordinary Buffet + Copper Peptides 1%:  </b></h4>
+    <div style="font-size: 20px;">Contains copper peptides, Matrixyl 3000, and hyaluronic acid to improve skin elasticity, firmness, and reduce signs of aging.
+      <br>Buy it now: <a href="https://www.amazon.in/Ordinary-Buffet-Multi-Technology-Peptide/dp/B07DP76XPL/ref=sr_1_5?crid=J9HEF4NISSVE&keywords=
+      The+Ordinary+Buffet+%2B+Copper+Peptides+1%25%3A&qid=1682969036&sprefix=the+ordinary+buffet+%2B+copper+peptides+1%25+%2Caps%2C409&sr=8-5">amazon.com</a></li></div>  
+    
+    <li style=" padding-top: 15px;"><b><h4>3. Neutrogena Rapid Wrinkle Repair Retinol Oil: </b></h4>
+    <div style="font-size: 20px;">Contains retinol SA, glucose complex, and hyaluronic acid to reduce fine lines, wrinkles, and improve skin texture.
+      <br>Buy it now: <a href="https://www.amazon.in/Neutrogena-Rapid-Wrinkle-Repair-Moisturizer/dp/B004D2C4Q4/ref=sr_1_5?crid=3KH0QISP7TPQG&keywords=
+      Neutrogena+Rapid+Wrinkle+Repair+Retinol+Oil&qid=1682969009&sprefix=skinceuticals+c+e+ferulic%2Caps%2C641&sr=8-5">amazon.com</a></li></div> 
+
+    <li style=" padding-top: 15px;"><b><h4>4. SkinCeuticals C E Ferulic: </b></h4>
+    <div style="font-size: 20px;">Contains vitamin C, vitamin E, and ferulic acid to improve skin texture, firmness, and reduce the appearance of fine lines and wrinkles.
+      <br>Buy it now: <a href="https://www.amazon.in/20-Vitamin-Ferulic-Acid-Serum/
+      dp/B0036BI56G/ref=sr_1_8?crid=CWSROT9V54GO&keywords=SkinCeuticals+C+E+Ferulic&qid=1682968984&sprefix=skinceuticals+c+e+ferulic%2Caps%2C362&sr=8-8">amazon.com</a></li></div>  
+    
+    <li style=" padding-top: 15px;"><b><h4>5. Drunk Elephant A-Passioni Retinol Cream:  </b></h4>
+    <div style="font-size: 20px;">Contains vegan retinol, passionfruit, and jojoba oil to reduce fine lines, wrinkles, and improve skin texture.
+      <br>Buy it now: <a href="https://www.amazon.in/Conscious-ChemistTM-Lightweight-Moisturiser-Fragrance/dp/B09TLB8FQ4/ref=sr_1_
+      8?crid=X1UERXWZ4EZ0&keywords=Drunk+Elephant+A-Passioni+Retinol+Cream&qid=1682968946&sprefix=drunk+elephant+a-passioni+retinol+cream%2Caps%2C452&sr=8-8">amazon.com</a></li></div> 
+    
+    <li style=" padding-top: 15px;"><b><h4>6. Sunday Riley Good Genes All-In-One Lactic Acid Treatment:  </b></h4>
+    <div style="font-size: 20px;">Contains lactic acid, licorice extract, and lemongrass oil to exfoliate dead skin cells, reduce fine lines, and improve skin texture.
+      <br>Buy it now: <a href="https://www.amazon.in/Sunday-Riley-Good-Genes/dp/B0037LRZHA/ref=sr_1_5?crid=2IW2EU7TW7F5T&keywords=
+      Sunday+Riley+Good+Genes+All-In-One+Lactic+Acid+Treatment&qid=1682968926&sprefix=sunday+riley+good+genes+all-in-one+lactic+acid+treatment%2Caps%2C319&sr=8-5">amazon.com</a></li></div> 
+
+    <li style=" padding-top: 15px;"><b><h4>7. PCA Skin Rejuvenating Serum:  </b></h4>
+    <div style="font-size: 20px;">Contains epidermal growth factor, hyaluronic acid, and niacinamide to improve skin elasticity, firmness, and reduce signs of aging.
+      <br>Buy it now: <a href="https://www.amazon.in/WOW-Skin-Science-Ubtan-Serum/dp/B08CT5T5HD/ref=sr_1_5?crid=2Q69AYBFS7BJ&keywords=
+      PCA+Skin+Rejuvenating+Serum&qid=1682968898&sprefix=pca+skin+rejuvenating+serum%2Caps%2C412&sr=8-5">amazon.com</a></li></div> 
+
+    <li style=" padding-top: 15px;"><b><h4>8. Estée Lauder Advanced Night Repair Synchronized Multi-Recovery Complex: </b></h4>
+    <div style="font-size: 20px;"> Contains hyaluronic acid, niacinamide, and antioxidants to improve skin texture, firmness, and reduce signs of aging.
+      <br>Buy it now: <a href="https://www.amazon.in/Estee-Lauder-I0113189-Synchronized-Multi-Recovery/dp/B08DH979F7/ref=sr_1_3?
+      crid=2O6OL2VJF47XV&keywords=Est%C3%A9e+Lauder+Advanced+Night+Repair+Synchronized+Multi-Recovery+Complex&qid=1682968874&sprefix=est%C3%A9e+lauder+advanced+night+repair+synchronized+multi-recovery+complex%2Caps%2C482&sr=8-3">amazon.com</a></li></div> 
+
+    <li style=" padding-top: 15px;"><b><h4>9. StriVectin-SD Advanced Plus Intensive Moisturizing Concentrate:</b></h4>
+    <div style="font-size: 20px;">Contains niacinamide, peptides, and hyaluronic acid to reduce fine lines, wrinkles, and improve skin texture.
+      <br>Buy it now: <a href="https://www.amazon.in/Minimalist-Arbutin-Pigmentation-Hyaluronic-Blemishes/dp/B08GGDRRQ8
+      /ref=sr_1_7?crid=1NU3JC25PKSP7&keywords=First+Aid+Beauty+Eye+Duty+Niacinamide+Brightening+Cream&qid=1682968808&sprefix=la+mer+the+eye+concentrate+%2Caps%2C741&sr=8-7">amazon.com</a></li></div> 
+
+    <li style=" padding-top: 15px;"><b><h4>10. Kate Somerville +Retinol Vita C Power Serum: </b></h4>
+    <div style="font-size: 20px;">Contains retinol, vitamin C, and hyaluronic acid to reduce fine lines, wrinkles, and improve skin texture.
+      <br>Buy it now: <a href="https://www.amazon.in/Himalayan-Organics-Hyaluronic-Capture-Retinol/dp/B07W8WDF7Q/ref=sr_1_fkmr1_1?
+      crid=OA528B1Q71OQ&keywords=Kate+Somerville+%2BRetinol+Vita+C+Power+Serum&qid=1682968755&sprefix=kate+somerville+%2Bretinol+vita+c+power+serum%2Caps%2C407&sr=8-1-fkmr1">amazon.com</a></li></div> 
+  
+  </ul>
+</section>
+  </body>
+</html>
